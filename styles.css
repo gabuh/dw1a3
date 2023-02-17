@@ -1,8 +1,14 @@
 body {
   background-color: black;
+  margin: auto;
+  width: 640px;
+  padding: 50px; 
+  font-family: 'Lexend Deca', sans-serif;
+  color: #2E475D;
 }
 h1 {
   color: white;
+  text-align: center;
 }
 
 p {
@@ -11,4 +17,22 @@ p {
 
 a {
   color: pink;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px){
+  img.gallery{
+    display: block;
+  }
+}
+@media only screen and (min-device-width: 1224px){
+  img.gallery{
+    float: left;
+  }
+}
+
+.btn{
+  text-transform: uppercase;
+  background-color: blue;
+  border-radius: 10px;
+  color: white;
 }
