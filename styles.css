@@ -5,6 +5,7 @@ body {
   padding: 50px; 
   font-family: 'Lexend Deca', sans-serif;
   color: #2E475D;
+  scale: 2;
 }
 h1 {
   color: white;
@@ -35,4 +36,22 @@ a {
   background-color: blue;
   border-radius: 10px;
   color: white;
+}
+table{
+  color: white;
+  background-color: white;
+  align-content: center;
+  margin-left: 100px;
+  border-color: grey;
+}
+
+.leftTable{
+  background-color: blue;
+  color: white;
+  text-transform: uppercase;
+  width: 50px;
+}
+#tableCenter{
+  margin: auto;
+  background-color: transparent;
 }

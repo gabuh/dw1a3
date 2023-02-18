@@ -11,12 +11,29 @@
   </head>
   <body>
     <h1>Almost there</h1>
-    <div style="text-align: center;">
-      <button class="btn bnt-primary" onclick="goPage(1)" type="Just look at me now">Activity 1</button>
-      <button class="btn bnt-primary" onclick="goPage(2)" type="Just look at me now">Activity 2</button>
-      <button class="btn bnt-primary" onclick="goPage(3)" type="Just look at me now">Activity 3</button>
     
+    <table border="2" scope="col">
+      <tr>
+        <td><button class="leftTable" onmouseover="scaleElement(this,2)" onmouseout="scaleElement(this,1)" type="submit">um</button></td>
+      </tr>
+      <tr>
+        <td><button class="leftTable" onmouseover="scaleElement(this,2)" onmouseout="scaleElement(this,1)"  type="submit">dois</button></td>
+      </tr>
+      </table>
+    
+    <div style="text-align: center;">
+      <table id="tableCenter" border="0">
+        <tr>
+          <td><button class="btn" onmouseover="scaleElement(this,2)" onmouseout="scaleElement(this,1)" onclick="goPage(1)" type="submit">Activity 1</button></td>
+          <td><button class="btn" onmouseover="scaleElement(this,2)" onmouseout="scaleElement(this,1)" onclick="goPage(2)" type="submit">Activity 2</button></td>
+          <td><button class="btn" onmouseover="scaleElement(this,2)" onmouseout="scaleElement(this,1)" onclick="goPage(3)" type="submit">Activity 3</button></td>
+        </tr>
+      </table>
+      
+      
+      
     </div>
+     
       
   </body>
 </html>
