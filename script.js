@@ -3,6 +3,10 @@ function goPage(x){
 }
 
 function scaleElement(el,y){
-  el.style.scale=y;
+  if (y == 0) {
+    el.style.zoom=0;
+  }else{
+    el.style.zoom=2;
+  }
 }
 

@@ -1,11 +1,8 @@
 body {
   background-color: black;
-  margin: auto;
-  width: 640px;
-  padding: 50px; 
+  margin: 20%;
   font-family: 'Lexend Deca', sans-serif;
   color: #2E475D;
-  scale: 2;
 }
 h1 {
   color: white;
@@ -34,23 +31,16 @@ a {
 .btn{
   text-transform: uppercase;
   background-color: blue;
-  border-radius: 10px;
+  border-radius: 10%;
   color: white;
 }
 table{
   color: white;
   background-color: white;
   align-content: center;
-  margin-left: 100px;
   border-color: grey;
 }
 
-.leftTable{
-  background-color: blue;
-  color: white;
-  text-transform: uppercase;
-  width: 50px;
-}
 #tableCenter{
   margin: auto;
   background-color: transparent;
