@@ -45,3 +45,8 @@ table{
   margin: auto;
   background-color: transparent;
 }
+
+.textContent{
+  text-align:center;
+  display: none;
+}
