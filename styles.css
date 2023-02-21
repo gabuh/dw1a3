@@ -1,12 +1,13 @@
 body {
-  background-color: black;
-  margin: 20%;
+  background-color: #212529;
   font-family: 'Lexend Deca', sans-serif;
   color: #2E475D;
+  margin: 0%;
 }
 h1 {
   color: white;
   text-align: center;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 p {
@@ -30,9 +31,11 @@ a {
 
 .btn{
   text-transform: uppercase;
-  background-color: blue;
-  border-radius: 10%;
-  color: white;
+  background-color: #343A40;
+  border-radius: 12px;
+  color: #F8F9FA;
+  border-color: #6C757D;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 table{
   color: white;
@@ -49,4 +52,25 @@ table{
 .textContent{
   text-align:center;
   display: none;
+}
+
+pre {
+  position: center;
+  text-align:center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: small;
+  color: #F8F9FA;
+  margin-left:auto;
+}
+
+#lgText{
+  size: 1% ;
+  text-align: center;
+  font-size: xx-small;
+}
+#lg{
+  display: block;
+  width: 5%;
+  margin-left: auto;
+  margin-right: auto;
 }
