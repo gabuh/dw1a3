@@ -1,5 +1,6 @@
 function goPage(x){
-  window.location.href = "https://gabuh.github.io/dw1a3/A"+ x ;
+  x>0?x="A"+x:x="HW";
+   window.location.href = "https://gabuh.github.io/dw1a3/"+ x ;
 }
 
 function init(){
