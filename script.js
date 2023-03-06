@@ -15,7 +15,7 @@ function logoAnimation() {
     if(pos == 14){
       clearInterval(id);
     }else{
-      el.src = `http://127.0.0.1:5500/assets/animation/${pos}.svg`;
+      el.src = `./assets/animation/${pos}.svg`;
       pos++;
     }
   }

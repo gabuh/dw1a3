@@ -120,14 +120,11 @@ footer{
   }
 
   main{
-    display: flex;
     justify-content: center;
   }  
 
   #act div{
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto;
     justify-content: space-between;
     margin-top: -1.4rem;
     margin-left: 0%;
