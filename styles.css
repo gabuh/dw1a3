@@ -33,6 +33,7 @@ body {
 
 main {
   min-height: 90%;
+  z-index: 1;
 }
 
 h1 {
@@ -100,7 +101,9 @@ footer p {
   margin: 0;
 }
 
+
 footer{
+  z-index: 1;
   width: 100%;
   align-items: center;
   position: absolute;
