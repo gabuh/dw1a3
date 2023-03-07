@@ -1,6 +1,6 @@
 # DW1A3 
 
-The `DW1A3` repository is created to be part of the subject `Web Development` .
+The `DW1A3` repository was created to be part of the subject `Web Development` .
 
 Read this in other languages: [English](./README.md), [Português](./README.pt.md)
 
