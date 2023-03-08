@@ -58,6 +58,8 @@ p {
   }
 }
 
+
+
 .btn{
   border: dashed;
   text-transform: uppercase;
@@ -70,7 +72,11 @@ p {
   cursor: pointer;
 }
 
-
+.btn:hover{
+  zoom:2;
+  background: #9d0eb8;
+  color:#F8F9FA;
+}
 
 #act div{
   display: grid;

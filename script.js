@@ -26,18 +26,12 @@ function init(){
   const contents = document.getElementsByClassName("textContent");
   for(let i=0; i<element.length ;i++ ){
     element.item(i).addEventListener("mouseover", function() {
-      this.style.zoom="2";
-      this.style.background="#9d0eb8";
-      this.style.color="#F8F9FA";
       contents.item(i).style.display="block";
       document.getElementById("footer").style.position="relative";
 
     }); 
     
     element.item(i).addEventListener("mouseout", function(){
-      this.style.zoom="0";
-      this.style.background="#d9fe05";
-      this.style.color="#000000";
       contents.item(i).style.display="none";
       document.getElementById("footer").style.position="absolute";
     });
