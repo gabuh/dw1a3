@@ -33,6 +33,14 @@ li{
 
 h1{
     font-weight: 200;
+    padding: 15px;
+}
+
+h2{
+  font-size: 50px;
+  line-height: 10px;
+  font-family: poppinsmedium;
+  padding: 15px;
 }
 
 main{
@@ -41,20 +49,71 @@ main{
     margin-top: 50px;
 }
 
+a{
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+}
 
+a:hover{
+  color: #00ffff;
+  transition: 0.3s all;
+}
 
+span{
+  color: aqua;
+}
+p{
+  padding: 15px;
+  line-height: 50px;
+  max-width: 500px;
+  font-family: poppinslight;
 
+}
 
+img{
+  width: 500px;
+}
 
+#inscreva-se-btn{
+  border: 2px solid aqua;
+  border-radius: 20px;
+  padding: 15px;
+}
 
+#inscreva-se-btn:hover{
+  background-color: aqua;
+  color: black;
+}
 
+form{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
 
+input{
+  margin-top: 20px;
+  height: 40px;
+  padding: 15px;
+  border-radius: 20px;
+  border: none;
+  font-size: 15px;
+}
 
+form [type="submit"]{
+  height: 50px;
+  width: 50%;
+  background-color: aqua;
+  color: black;
+  font-weight: bold;
+}
 
+form [type="submit"]:hover{
+  cursor: pointer;
+}
 
-
-
-
+  /* MEDIA RESPONSIBLE */
 
 
 
@@ -127,3 +186,5 @@ main{
     font-style: normal;
   
   }
+
+
