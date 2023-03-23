@@ -8,8 +8,8 @@ body{
     background-color:rgb(34, 34,34);
     color: white;
     font-family: poppinsregular;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin-left: 10%;
+    margin-right: 10%;
     padding: 15px;
 }
 
@@ -23,8 +23,7 @@ header{
 
 
 #title{
-    flex-direction: column;
-    line-height: 10px;
+    text-align: center;
 }
 
 li{
@@ -33,13 +32,12 @@ li{
 
 h1{
     font-weight: 200;
-    padding: 15px;
     line-height:normal;
 }
 
 h2{
   font-size: 50px;
-  line-height: 10px;
+  line-height: 50px;
   font-family: poppinsmedium;
   padding: 15px;
 }
@@ -47,6 +45,7 @@ h2{
 main{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     margin-top: 50px;
 }
 
@@ -67,7 +66,7 @@ span{
 }
 p{
   padding: 15px;
-  line-height: 50px;
+  line-height: 20px;
   max-width: 500px;
   font-family: poppinslight;
 
@@ -116,8 +115,50 @@ form [type="submit"]:hover{
 }
 
   /* MEDIA RESPONSIBLE */
+  @media screen and (max-width: 913px){
+    ul{
+      display: contents;
+    }
+  }
 
 
+
+  @media screen and (max-width: 760px){
+    header{
+      flex-direction: column;
+
+    }
+    main{
+      flex-direction: column;
+    }
+    h2{
+      font-size: 38px;
+    }
+
+    form{
+      margin: auto;
+      width: 80%;
+    }
+
+    img{
+      margin-top: 100px;
+      width: 100%;
+    }
+
+    #send-btn{
+      align-self: center;
+      width: 100%;
+    }
+
+    h2 span{
+      line-height:normal;
+      
+    }
+
+    ul{
+      display: contents;
+    }
+  }
 
 
 
@@ -190,41 +231,3 @@ form [type="submit"]:hover{
   }
 
 
-
-
-  @media screen and (max-width: 760px){
-    header{
-      flex-direction: column;
-
-    }
-    main{
-      flex-direction: column;
-    }
-    h2{
-      font-size: 38px;
-    }
-
-    form{
-      margin: auto;
-      width: 80%;
-    }
-
-    img{
-      margin-top: 100px;
-      width: 100%;
-    }
-
-    #send-btn{
-      align-self: center;
-      width: 100%;
-    }
-
-    h2 span{
-      line-height:normal;
-      
-    }
-
-    ul{
-      align-items: center;
-    }
-  }
