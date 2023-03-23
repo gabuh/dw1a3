@@ -34,6 +34,7 @@ li{
 h1{
     font-weight: 200;
     padding: 15px;
+    line-height:normal;
 }
 
 h2{
@@ -62,6 +63,7 @@ a:hover{
 
 span{
   color: aqua;
+  line-height:normal;
 }
 p{
   padding: 15px;
@@ -188,3 +190,41 @@ form [type="submit"]:hover{
   }
 
 
+
+
+  @media screen and (max-width: 760px){
+    header{
+      flex-direction: column;
+
+    }
+    main{
+      flex-direction: column;
+    }
+    h2{
+      font-size: 38px;
+    }
+
+    form{
+      margin: auto;
+      width: 80%;
+    }
+
+    img{
+      margin-top: 100px;
+      width: 100%;
+    }
+
+    #send-btn{
+      align-self: center;
+      width: 100%;
+    }
+
+    h2 span{
+      line-height:normal;
+      
+    }
+
+    ul{
+      align-items: center;
+    }
+  }
