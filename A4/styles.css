@@ -1,3 +1,10 @@
+:root{
+  --main-color: #b9473f;
+  --main-background-color:rgb(34, 34,34);
+  --font-color-buttons: black;
+  --font-color-texts:white;
+}
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -5,12 +12,17 @@
 }
 
 body{
-    background-color:rgb(34, 34,34);
-    color: white;
+    background-color: var(--main-background-color);
+    color: var(--font-color-texts);
     font-family: poppinsregular;
     margin-left: 10%;
     margin-right: 10%;
     padding: 15px;
+}
+ul{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  align-content: space-between;
 }
 
 
@@ -19,6 +31,66 @@ header{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--main-color);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--main-color);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 
 
@@ -50,18 +122,18 @@ main{
 }
 
 a{
-  color: white;
+  color: var(--font-color-texts);
   padding: 15px;
   text-decoration: none;
 }
 
 a:hover{
-  color: #00ffff;
+  color: var(--main-color);
   transition: 0.3s all;
 }
 
 span{
-  color: aqua;
+  color: var(--main-color);
   line-height:normal;
 }
 p{
@@ -77,14 +149,14 @@ img{
 }
 
 #inscreva-se-btn{
-  border: 2px solid aqua;
+  border: 2px solid var(--main-color);
   border-radius: 20px;
   padding: 15px;
 }
 
 #inscreva-se-btn:hover{
-  background-color: aqua;
-  color: black;
+  background-color: var(--main-color);
+  color: var(--font-color-buttons);
 }
 
 form{
@@ -105,8 +177,8 @@ input{
 form [type="submit"]{
   height: 50px;
   width: 50%;
-  background-color: aqua;
-  color: black;
+  background-color: var(--main-color);
+  color: var(--font-color-buttons);
   font-weight: bold;
 }
 
@@ -118,6 +190,9 @@ form [type="submit"]:hover{
   @media screen and (max-width: 913px){
     ul{
       display: contents;
+    }
+    .switch{
+      margin-top: 2%;
     }
   }
 
