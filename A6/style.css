@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+
+#theme-switch{
+    position:fixed;
+    z-index: 1;
+    top: 40px;
+    right: 100px;
+    cursor: pointer;
+}
+
+#theme-switch:checked ~ *{
+    filter: invert(1);
+}
+
+body{
+    color: black;
+}
+
+header{
+    margin: 5% 0% 0% 0%;
+    text-align: center;
+}
+
+main{
+    text-align: center;
+    margin: 5% 12% 0% 12%;
+}
+
