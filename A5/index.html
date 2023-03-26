@@ -5,9 +5,735 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>empty</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>sorry, there is nothing yet</h1>
-    
+<header>
+    <h1 id="title">HERE I AM</h1>
+    <img id="trophy" src="trophy.png" alt="trophy">
+</header>
+    <main>
+
+        <h1>Question</h1>
+        <h1>Answer</h1>
+        <pre class="question">
+            <h2>LV 1</h2>
+            Type Selector
+            Select elements by their type
+            A
+            Selects all elements of type A. Type refers to the type of tag, so div, p and ul are all different element types.
+            div selects all div elements.
+            p selects all p elements.
+        </pre>
+        <pre class="answer">
+            p {
+                padding: 0;
+            }
+
+            div {
+                padding: 0;
+            }
+        </pre>
+<!--  -->
+        <pre class="question">
+            <h2>LV 2</h2>
+            Selects all elements of type A. Type refers to the type of tag, so div, p and ul are all different element types.
+            div will select all div elements.
+            p will select all p elements.   
+            >> Select bento element
+        </pre>
+        <pre class="answer">
+            bento{
+
+            }
+        </pre>
+        <pre class="question">
+            <h2>LV 3</h2>
+            Select elements with an ID
+            #id
+            Selects the element with the id attribute. You can also combine the ID selector with the type selector.
+            #cool will select any element with id="cool"
+            ul#long will select ul id="long"
+            >> Select the fancy id
+        </pre>
+        <pre class="answer">
+            #fancy{
+
+            }
+        </pre>
+        <pre class="question">
+            <h2>LV 4</h2>
+            Select an element inside another element
+            A  B
+            Selects all B inside of A. Here B is the descendant element, meaning an element that is inside of another element.
+            p  strong will select all strong that are descendants of any p
+            #fancy  span will select any span that is a descendant of any element with id="fancy"
+                >> SELECT THE APPLE ON THE PLATE
+        </pre>
+        <pre class="answer">
+            plate apple{
+
+            }
+            </pre>
+        <!--  -->
+        <pre class="question">
+            <h2>LV 5</h2>
+            Combine the Descendant & ID Selectors
+            #id  A
+            You can combine any selector with the descendent selector.
+            #cool span will select all span elements that are inside of elements with id="cool"
+                >> SELECT THE PICKLE ON THE FANCY PLATE
+        </pre>
+        <pre class="answer">
+            #fancy pickle{
+
+            }
+        </pre>
+        <!--  -->
+        <!--  -->
+        <pre class="question">
+            <h2>LV 6</h2>
+            Class Selector
+            Select elements by their class
+            .classname
+            The class selector selects all elements with that class attribute. Elements can only have one ID, but many classes.
+            .neato selects all elements with class="neato"
+
+            >> Select the small apples
+        </pre>
+        <pre class="answer">
+            .small{
+
+            }
+        </pre>
+        <!--  -->
+        <!--  -->
+        <pre class="question">
+            <h2>LV 7</h2>
+            Combine the Class Selector
+            A.className
+            You can combine the class selector with other selectors, like the type selector.
+            ul.important will select all ul elements that have class="important"
+            #big.wide will select all elements with id="big" that also have class="wide"
+                
+                >> Select the small oranges
+
+            div class="table"
+                apple/
+                apple class="small"/
+                bento
+                orange class="small"/
+                /bento
+                plate
+                orange/
+                /plate
+                plate
+                orange class="small"/
+                /plate
+                /div
+        </pre>
+        <pre class="answer">
+            orange.small{
+
+            }
+        </pre>
+        <!--  -->
+        <!--  -->
+        <pre class="question">
+            <h2>LV 8</h2>
+            You can do it...
+            Put your back into it!
+            Combine what you learned in the last few levels to solve this one!
+            
+                >> Select the small oranges in the bentos
+
+            div class="table"
+                apple/
+                plate
+                orange class="small"/
+                /plate
+                bento
+                orange class="small"/
+                /bento
+                bento
+                apple class="small"/
+                /bento
+                bento
+                orange class="small"/
+                /bento
+                /div
+        </pre>
+        <pre class="answer">
+            bento orange.small{
+
+            }
+        </pre>
+        <!--  -->
+        <!--  -->
+        <pre class="question">
+            <h2>LV 9</h2>
+            Comma Combinator
+            Combine, selectors, with... commas!
+            A, B
+            Thanks to Shatner technology, this will select all A and B elements. You can combine any selectors this way, and you can specify more than two.
+            p, .fun will select all p elements as well as all elements with class="fun"
+            a, p, div will select all a, p and div elements
+
+            >> Select all the plates and bentos
+
+            div class="table"
+                pickle class="small"/
+                pickle/
+                plate
+                pickle/
+                /plate
+                bento
+                pickle/
+                /bento
+                plate
+                pickle/
+                /plate
+                pickle/
+                pickle class="small"/
+                /div
+
+        </pre>
+        <pre class="answer">
+            bento, plate{
+
+            }
+        </pre>
+        <!--  -->
+        <!--  -->
+        <pre class="question">
+            <h2>LV 10</h2>
+            The Universal Selector
+            You can select everything!
+            *
+            You can select all elements with the universal selector!
+            p * will select every element inside all p elements.
+
+            >> Select all the things!
+
+            div class="table"
+                apple/
+                plate
+                orange class="small"/
+                /plate
+                bento/bento
+                bento
+                orange/
+                /bento
+                plate id="fancy"/plate
+                /div
+
+
+        </pre>
+        <pre class="answer">
+            *{
+
+            }
+        </pre>
+        <!--  -->
+        <!--  -->
+        <pre class="question">
+            <h2>LV 11</h2>
+            Combine the Universal Selector
+            A  *
+            This will select all elements inside of A.
+            p * will select every element inside all p elements.
+            ul.fancy * will select every element inside all ul class="fancy" elements.
+
+            >> Select everything on a plate
+
+            div class="table"
+                plate id="fancy"
+                orange class="small"/
+                /plate
+                plate
+                pickle/
+                /plate
+                apple class="small"/
+                plate
+                apple/
+                /plate
+                /div
+
+        </pre>
+        <pre class="answer">
+            plate *{
+
+            }
+        </pre>
+        <!--  -->
+        <!--  -->
+        <pre class="question">
+            <h2>LV 12</h2>
+            Adjacent Sibling Selector
+            Select an element that directly follows another element
+            A + B
+            This selects all B elements that directly follow A. Elements that follow one another are called siblings. They're on the same level, or depth.
+            
+            In the HTML markup for this level, elements that have the same indentation are siblings.
+            p + .intro will select every element with class="intro" that directly follows a p
+            div + a will select every a element that directly follows a div
+
+            >> Select every apple that's next to a plate
+            
+            div class="table"
+                bento
+                apple class="small"/
+                /bento
+                plate/plate
+                apple class="small"/
+                plate/plate
+                apple/
+                apple class="small"/
+                apple class="small"/
+                /div
+
+        </pre>
+        <pre class="answer">
+            plate + apple{
+
+            }
+        </pre>
+        <!--  -->
+        <!--  -->
+        <pre class="question">
+            <h2>LV 13</h2>
+            General Sibling Selector
+            Select elements that follows another element
+            A ~ B
+            You can select all siblings of an element that follow it. This is like the Adjacent Selector (A + B) except it gets all of the following elements instead of one.
+            A ~ B will select all B that follow a A
+
+            >> Select every pickle to the right of the bento
+
+            div class="table"
+                pickle/
+                bento
+                orange class="small"/
+                /bento
+                pickle class="small"/
+                pickle/
+                plate
+                pickle/
+                /plate
+                plate
+                pickle class="small"/
+                /plate
+                /div
+
+
+        </pre>
+        <pre class="answer">
+            bento ~ pickle{
+
+            }
+        </pre>
+        <!--  -->
+        <!--  -->
+        <pre class="question">
+            <h2>LV 14</h2>
+            Child Selector
+            Select direct children of an element
+            A > B 
+            You can select elements that are direct children of other elements. A child element is any element that is nested directly in another element.
+            
+            Elements that are nested deeper than that are called descendant elements.
+            A > B will select all B that are a direct children A
+
+            >> Select the apple directly on a plate
+
+            div class="table"
+                plate
+                bento
+                apple/
+                /bento
+                /plate
+                plate
+                apple/
+                /plate
+                plate/plate
+                apple/
+                apple class="small"/
+                /div
+
+        </pre>
+        <pre class="answer">
+            plate > apple{
+
+            }
+        </pre>
+        <!--  -->
+        <!--  -->
+        <pre class="question">
+            <h2>LV 15</h2>First Child Pseudo-selector
+            Select a first child element inside of another element
+            :first-child
+            You can select the first child element. A child element is any element that is directly nested in another element. You can combine this pseudo-selector with other selectors.
+            :first-child selects all first child elements.
+            p:first-child selects all first child p elements.
+            div p:first-child selects all first child p elements that are in a div.
+
+            >> Select the top orange
+
+            div class="table"
+                bento/bento
+                plate/plate
+                plate
+                orange/
+                orange/
+                orange/
+                /plate
+                pickle class="small"/
+                /div
+
+
+        </pre>
+        <pre class="answer">
+            plate orange:first-child{
+
+            }
+        </pre>
+        <!--  -->
+        <!--  -->
+        <pre class="question">
+            <h2>LV 16</h2>
+            Only Child Pseudo-selector
+            Select an element that are the only element inside of another one.
+            :only-child
+            You can select any element that is the only element inside of another one.
+            span:only-child selects the span elements that are the only child of some other element.
+            ul li:only-child selects the only li element that are in a ul.
+
+            >> Select the apple and the pickle on the plates
+
+            div class="table"
+                plate
+                apple/
+                /plate
+                plate
+                pickle class="small"/
+                /plate
+                bento/bento
+                pickle/
+                plate
+                orange class="small"/
+                orange/
+                /plate
+                pickle class="small"/
+                /div
+
+        </pre>
+        <pre class="answer">
+            apple, pickle :only-child{
+
+            }
+        </pre>
+        <!--  -->
+        <!--  -->
+        <pre class="question">
+            <h2>LV 17</h2>
+            Last Child Pseudo-selector
+            Select the last element inside of another element
+            :last-child
+            You can use this selector to select an element that is the last child element inside of another element.
+            
+            Pro Tip → In cases where there is only one element, that element counts as the first-child, only-child and last-child!
+            :last-child selects all last-child elements.
+            span:last-child selects all last-child span elements.
+            ul li:last-child selects the last li elements inside of any ul.
+
+            >> Select the small apple and the pickle
+
+            div class="table"
+                plate id="fancy"
+                apple class="small"/
+                /plate
+                plate/plate
+                plate
+                orange class="small"/
+                orange/
+                /plate
+                pickle class="small"/
+                /div
+
+        </pre>
+        <pre class="answer">
+            pickle, apple:last-child{
+
+            }
+        </pre>
+        <!--  -->
+        <!--  -->
+        <pre class="question">
+            <h2>LV 18</h2>
+            Nth Child Pseudo-selector
+            Select an element by its order in another element
+            :nth-child(A)
+            Selects the nth (Ex: 1st, 3rd, 12th etc.) child element in another element.
+            :nth-child(8) selects every element that is the 8th child of another element.
+            div p:nth-child(2) selects the second p in every div
+
+            >> Select the 3rd plate
+
+            div class="table"
+                plate/plate
+                plate/plate
+                plate/plate
+                plate id="fancy"/plate
+                /div
+
+        </pre>
+        <pre class="answer">
+            plate:nth-child(3){
+
+            }
+        </pre>
+        <!--  -->
+        <!--  -->
+        <pre class="question">
+            <h2>LV 19</h2>
+            Nth Last Child Selector
+            Select an element by its order in another element, counting from the back
+            :nth-last-child(A)
+            Selects the children from the bottom of the parent. This is like nth-child, but counting from the back!
+            :nth-last-child(2) selects all second-to-last child elements.
+
+            >> Select the 1st bento
+
+            div class="table"
+                plate/plate
+                bento/bento
+                apple class="small"/
+                plate
+                orange/
+                orange/
+                orange/
+                /plate
+                bento/bento
+                /div
+
+        </pre>
+        <pre class="answer">
+            bento:nth-last-child(4)
+        </pre>
+        <!--  -->
+        <!--  -->
+        <pre class="question">
+            <h2>LV 20</h2>
+            First of Type Selector
+            Select the first element of a specific type
+            :first-of-type
+            Selects the first element of that type within another element.
+            span:first-of-type selects the first span in any element.
+
+            >> Select first apple
+
+            div class="table"
+                apple/
+                apple class="small"/
+                apple class="small"/
+                apple class="small"/
+                plate
+                orange class="small"/
+                orange/
+                /plate
+                /div
+
+        </pre>
+        <pre class="answer">
+            apple:first-of-type{
+
+            }
+        </pre>
+        <!--  -->
+        <!--  -->
+        <pre class="question">
+            <h2>LV 21</h2>
+            Nth of Type Selector
+            :nth-of-type(A)
+            Selects a specific element based on its type and order in another element - or even or odd instances of that element.
+            div:nth-of-type(2) selects the second instance of a div.
+            .example:nth-of-type(odd) selects all odd instances of a the example class.
+
+            >> Select all even plates
+
+            div class="table"
+                plate/plate
+                plate/plate
+                plate/plate
+                plate/plate
+                plate id="fancy"/plate
+                plate/plate
+                /div
+
+        </pre>
+        <pre class="answer">
+            plate:nth-of-type(even){
+
+            }
+        </pre>
+        <!--  -->
+        <!--  -->
+        <pre class="question">
+            <h2>LV 22</h2>
+            Nth-of-type Selector with Formula
+            :nth-of-type(An+B)
+            The nth-of-type formula selects every nth element, starting the count at a specific instance of that element.
+            span:nth-of-type(6n+2) selects every 6th instance of a span, starting from (and including) the second instance.
+            
+            >> Select every 2nd plate, starting from the 3rd
+
+            div class="table"
+                plate/plate
+                plate
+                pickle class="small"/
+                /plate
+                plate
+                apple class="small"/
+                /plate
+                plate/plate
+                plate
+                apple/
+                /plate
+                plate/plate
+                /div
+
+        </pre>
+        <pre class="answer">
+            plate:nth-of-type(2n+3){
+
+            }
+        </pre>
+        <!--  -->
+        <!--  -->
+        <pre class="question">
+            <h2>LV 23</h2>
+            Only of Type Selector
+            Select elements that are the only ones of their type
+            :only-of-type
+            Selects the only element of its type within another element.
+            p span:only-of-type selects a span within any p if it is the only span in there.
+
+            >> Select the apple on the middle plate.
+
+            div class="table"
+                plate
+                apple class="small"/
+                apple/
+                /plate
+                plate
+                apple class="small"/
+                /plate
+                plate
+                pickle class="small"/
+                /plate
+                /div
+
+        </pre>
+        <pre class="answer">
+            apple.small:only-of-type{
+
+            }
+        </pre>
+        <!--  -->
+        <!--  -->
+        <pre class="question">
+            <h2>LV 24</h2>
+            Last of Type Selector
+            Select the last element of a specific type
+            :last-of-type
+            Selects each last element of that type within another element. Remember type refers the kind of tag, so p and span are different types.
+            
+            I wonder if this is how the last dinosaur was selected before it went extinct.
+            div:last-of-type selects the last div in every element.
+            p span:last-of-type selects the last span in every p.
+
+            >> Select the second apple and orange
+
+            div class="table"
+                orange class="small"/
+                orange class="small"/
+                pickle/
+                pickle/
+                apple class="small"/
+                apple class="small"/
+                /div
+
+        </pre>
+        <pre class="answer">
+            orange:last-of-type, apple:last-of-type{
+
+            }
+        </pre>
+        <!--  -->
+        <!--  -->
+        <pre class="question">
+            <h2>LV 25</h2>
+            Empty Selector
+            Select elements that don't have children
+            :empty
+            Selects elements that don't have any other elements inside of them.
+            div:empty selects all empty div elements.
+
+            >> Select the empty bentos
+
+            div class="table"
+                bento/bento
+                bento
+                pickle class="small"/
+                /bento
+                bento/bento
+                bento/bento
+                /div
+
+
+        </pre>
+        <pre class="answer">
+            bento:empty{
+
+            }
+        </pre>
+        <!--  -->
+        <!--  -->
+        <pre class="question">
+            <h2>LV 26</h2>
+            Negation Pseudo-class
+            Select all elements that don't match the negation selector
+            :not(X)
+            You can use this to select all elements that do not match selector "X".
+            :not(#fancy) selects all elements that do not have id="fancy".
+            div:not(:first-child) selects every div that is not a first child.
+            :not(.big, .medium) selects all elements that do not have class="big" or class="medium".
+
+            >> Select the big apples
+
+            div class="table"
+                plate id="fancy"
+                apple class="small"/
+                /plate
+                plate
+                apple/
+                /plate
+                apple/
+                plate
+                orange class="small"/
+                /plate
+                pickle class="small"/
+                /div
+        </pre>
+        <pre class="answer">
+            apple:not(.small){
+
+            }
+        </pre>
+        <!--  -->
+
+    </main>
+    <script src="script.js"></script>
 </body>
+
 </html>
