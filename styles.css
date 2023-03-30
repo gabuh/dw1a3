@@ -47,7 +47,7 @@ p {
   color: white;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px){
+/* @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
   img.gallery{
     display: block;
   }
@@ -56,7 +56,7 @@ p {
   img.gallery{
     float: left;
   }
-}
+} */
 
 
 
@@ -71,6 +71,13 @@ p {
   font-size: large;
   cursor: pointer;
 }
+
+
+.btn.active{
+  background: #9d0eb8;
+  color:#F8F9FA;
+}
+
 
 .btn:hover{
   background: #9d0eb8;
@@ -94,6 +101,11 @@ p {
 .textContent{
   text-align:center;
   display: none;
+}
+
+
+.textContent.active{
+  display: block;
 }
 
 pre {
