@@ -15,8 +15,6 @@ body{
     background-color: var(--main-background-color);
     color: var(--font-color-texts);
     font-family: poppinsregular;
-    margin-left: 10%;
-    margin-right: 10%;
     padding: 15px;
 }
 ul{
@@ -31,6 +29,8 @@ header{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .switch {
