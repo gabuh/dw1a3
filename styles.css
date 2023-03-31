@@ -101,6 +101,7 @@ p {
 .textContent{
   text-align:center;
   display: none;
+  margin: 0% 20% 0% 20%;
 }
 
 
@@ -126,7 +127,6 @@ footer{
   z-index: 1;
   width: 100%;
   align-items: center;
-  position: absolute;
   display: block;
   size: 1% ;
   text-align: center;
@@ -139,7 +139,10 @@ footer{
     font-size: 87.5%;
   }
   #logo-animated{
-    width: 100%;
+    width: 70%;
+  }
+  header{
+    margin: 0;
   }
 
   main{
@@ -148,14 +151,18 @@ footer{
 
   #act div{
     display: grid;
-    justify-content: space-between;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items:center;
     margin-top: -1.4rem;
     margin-left: 0%;
     margin-right: 0%;
     gap: 2rem;
   }
 
-  
+ .textContent{
+  margin: 0;
+ } 
 
   
 }
