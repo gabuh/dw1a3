@@ -113,7 +113,7 @@ p {
   right: 0;
   z-index: -1;
   background-color: #00000023;
-  filter: blur(1.5rem);
+  filter: blur(3rem);
 }
 
 .textContent{
