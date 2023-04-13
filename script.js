@@ -34,14 +34,35 @@ function init(){
       contents.item(i).classList.add("active");
       document.getElementById("footer").style.position="relative";
 
+      document.getElementById('footer').addEventListener("click", function(){
+        element.item(i).classList.remove("active");
+        contents.item(i).classList.remove("active");
+        document.getElementById("footer").style.position="absolute";
+      });
+
+      document.getElementById('escopo').addEventListener("click", function(){
+        element.item(i).classList.remove("active");
+        contents.item(i).classList.remove("active");
+        document.getElementById("footer").style.position="absolute";
+      });
+
+      document.getElementsByTagName('header')[0].addEventListener("click", function(){
+        element.item(i).classList.remove("active");
+        contents.item(i).classList.remove("active");
+        document.getElementById("footer").style.position="absolute";
+      });
+
+
+
     }); 
-    
+
     // contents.item(i).addEventListener("mouseout", function(){
-    //   element.item(i).classList.remove("active");
-    //   contents.item(i).classList.remove("active");
+      // element.item(i).classList.remove("active");
+      // contents.item(i).classList.remove("active");
     //   document.getElementById("footer").style.position="absolute";
     // });
   } 
+
 
   
   document.getElementById("logo-animated").addEventListener("mouseover",logoAnimation);

@@ -98,6 +98,24 @@ p {
   gap: 1rem;
 }
 
+#act {
+  position: relative;
+  z-index: 1;
+}
+
+#escopo{
+  position: absolute;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  top: 1.4rem;
+  left: -30%;
+  right: 0;
+  z-index: -1;
+  background-color: #00000023;
+  filter: blur(1.5rem);
+}
+
 .textContent{
   text-align:center;
   display: none;
@@ -124,6 +142,7 @@ footer p {
 
 
 footer{
+  position: absolute;
   z-index: 1;
   width: 100%;
   align-items: center;
@@ -132,6 +151,19 @@ footer{
   text-align: center;
   font-size: small;
   bottom: 0;
+}
+
+
+@media only screen and (max-height: 419px){
+  footer{
+    position: inherit;
+  }
+}
+
+@media only screen and (max-height: 719px) and (max-width: 800px){
+  footer{
+    position: inherit;
+  }
 }
 
 @media(max-width: 800px) {
