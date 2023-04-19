@@ -13,7 +13,7 @@ const projectFocusPosition = {
 document.getElementById("modalInterface-left").addEventListener("click",function(){
     var list=document.getElementById("projectList");
     var itemWidth = list.getElementsByTagName("div")[0].clientWidth;
-    var pos = projectFocusPosition._var - itemWidth - 10;
+    var pos = projectFocusPosition._var - itemWidth - 20;
     if(pos >= 0){
         list.scrollTo(pos,0);
         projectFocusPosition._var = pos;
@@ -23,7 +23,7 @@ document.getElementById("modalInterface-left").addEventListener("click",function
 document.getElementById("modalInterface-right").addEventListener("click",function(){
     var list=document.getElementById("projectList");
     var itemWidth = list.getElementsByTagName("div")[0].clientWidth;
-    var pos = projectFocusPosition._var + itemWidth + 10;
+    var pos = projectFocusPosition._var + itemWidth + 20;
     console.log("------------\nposition: "+pos);
     console.log("Focus: "+projectFocusPosition._var);
     console.log("Scroll Size: "+list.scrollWidth);
