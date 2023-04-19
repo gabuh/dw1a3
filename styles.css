@@ -47,7 +47,7 @@ p {
   color: white;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px){
+/* @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
   img.gallery{
     display: block;
   }
@@ -56,7 +56,7 @@ p {
   img.gallery{
     float: left;
   }
-}
+} */
 
 
 
@@ -71,6 +71,13 @@ p {
   font-size: large;
   cursor: pointer;
 }
+
+
+.btn.active{
+  background: #9d0eb8;
+  color:#F8F9FA;
+}
+
 
 .btn:hover{
   background: #9d0eb8;
@@ -91,9 +98,33 @@ p {
   gap: 1rem;
 }
 
+#act {
+  position: relative;
+  z-index: 1;
+}
+
+#escopo{
+  position: absolute;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  top: 1.4rem;
+  left: -30%;
+  right: 0;
+  z-index: -1;
+  background-color: #00000023;
+  filter: blur(3rem);
+}
+
 .textContent{
   text-align:center;
   display: none;
+  margin: 0% 20% 0% 20%;
+}
+
+
+.textContent.active{
+  display: block;
 }
 
 pre {
@@ -111,10 +142,10 @@ footer p {
 
 
 footer{
+  position: absolute;
   z-index: 1;
   width: 100%;
   align-items: center;
-  position: absolute;
   display: block;
   size: 1% ;
   text-align: center;
@@ -122,12 +153,28 @@ footer{
   bottom: 0;
 }
 
+
+@media only screen and (max-height: 419px){
+  footer{
+    position: inherit;
+  }
+}
+
+@media only screen and (max-height: 719px) and (max-width: 800px){
+  footer{
+    position: inherit;
+  }
+}
+
 @media(max-width: 800px) {
   html{
     font-size: 87.5%;
   }
   #logo-animated{
-    width: 100%;
+    width: 70%;
+  }
+  header{
+    margin: 0;
   }
 
   main{
@@ -136,14 +183,18 @@ footer{
 
   #act div{
     display: grid;
-    justify-content: space-between;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items:center;
     margin-top: -1.4rem;
     margin-left: 0%;
     margin-right: 0%;
     gap: 2rem;
   }
 
-  
+ .textContent{
+  margin: 0;
+ } 
 
   
 }
