@@ -63,6 +63,7 @@ section {
     justify-content: space-between;
 }
 
+
 .carousel-list.container.content-panel span{
     text-decoration: none;
     background-image: linear-gradient(currentColor, currentColor);
@@ -127,28 +128,15 @@ section {
     vertical-align: middle;
 }
 
-@media screen and (max-width: 1000px) {
-    #mainLogo{
-      width: 560px;
-      margin-left: 0px;
-    }
-    #socialBar{
-      margin-top: 10px;
-    }
-  }
-  
-  
-  @media screen and (max-width: 800px) {
-    .carousel-list.container.panel-direction-left{
-          display: none;
-      }
-    .carousel-list.container.panel-direction-right{
-          display: none;
-      }
-  }
-  
-  @media screen and (max-width: 480px){
+
+@media screen and (max-width: 800px) {
     .carousel-list.container.content-panel{
         margin: 0.6rem 0% 0rem 0% ;
-     }
-  }
+    }
+    .carousel-list.container.panel-direction-left{
+        display: none;
+    }
+    .carousel-list.container.panel-direction-right{
+        display: none;
+    }
+}
