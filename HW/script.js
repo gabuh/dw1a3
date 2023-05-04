@@ -1,12 +1,13 @@
 const language= localStorage.getItem('language');
-var flag = document.URL.split("/")[4];
-if(language == 'en' && flag != 'index-en.html'){
+var flagEN = document.URL.endsWith("index-en.html");
+var defaultFlag = document.URL.endsWith("index.html");
+if(language == 'en' && flag == false){
   window.location.href="index-en.html";
 };
 if(language == 'en'){
   document.querySelector(".lang.flag.pt").classList.add("active");
 }
-if(language == 'pt' && flag != 'index.html'){
+if(language == 'pt' && defaultFlag == false){
   window.location.href="index.html";
 };
 if(language == 'pt'){
