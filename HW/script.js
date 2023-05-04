@@ -1,7 +1,7 @@
 const language= localStorage.getItem('language');
 var flagEN = document.URL.endsWith("index-en.html");
 var defaultFlag = document.URL.endsWith("index.html");
-if(language == 'en' && flag == false){
+if(language == 'en' && flagEN == false){
   window.location.href="index-en.html";
 };
 if(language == 'en'){
