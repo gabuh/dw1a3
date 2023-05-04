@@ -14,7 +14,7 @@
   
   <body>
     <header>
-      <img src="assets/caret-forward-outline.svg" id="theme-button" alt="botão de lista de temas">
+      <img src="assets/caret-forward-outline.svg" id="theme-button" alt="theme list button">
     </img>
       <div class="theme dash">
         <div class="theme-dash item dark"> </div>
@@ -41,44 +41,44 @@
     
     <main class="container">
       <section id="balance">
-          <h2 class="sr-only">Balanço</h2>
+          <h2 class="sr-only">Balance</h2>
       <div class="card">
           <h3>
-            <span>Entradas</span>
-            <img src="./assets/income.svg" alt="Imagems de entradas" />
+            <span>Income</span>
+            <img src="./assets/income.svg" alt="input image" />
             </h3>
-          <p id="incomeDisplay">R$ 0,00</p>
+          <p id="incomeDisplay">$ 0,00</p>
       </div>
       
       <div class="card">
           <h3>
-            <span>Saídas</span>
-            <img src="./assets/expense.svg" alt="Imagems de Saídas" />
+            <span>Expenses</span>
+            <img src="./assets/expense.svg" alt="output image" />
           </h3>
-          <p id="expenseDisplay">R$ 0,00</p>
+          <p id="expenseDisplay">$ 0,00</p>
       </div>
       
       <div class="card total">
           <h3>
           <span>Total</span>
-            <img src="./assets/total.svg" alt="Imagem de Total" />
+            <img src="./assets/total.svg" alt="total image" />
           </h3>
-          <p id="totalDisplay">R$ 0,00</p>
+          <p id="totalDisplay">$ 0,00</p>
       </div>  
       </section>
       
       <section id="transaction">
-          <h2 class="sr-only">Transações</h2>
+          <h2 class="sr-only">Transactions</h2>
           <div>
-            <a class="button new" id="modal-button" href="#">+ Nova Transação</a>
+            <a class="button new" id="modal-button" href="#">+ New Transaction</a>
             <a class="button new" id="csv-download-button" href="#">Download CSV File</a>
           </div>
           <table id="data-table">
             <thead>
               <tr>
-                <th>Descrição</th>
-                <th>Valor</th>
-                <th>Data</th>
+                <th>Description</th>
+                <th>Value</th>
+                <th>Date</th>
                 <th></th>
               </tr>
             </thead>
@@ -91,14 +91,14 @@
     <div class="modal-overlay">
       <div class="modal">
         <div id="form">
-          <h2>Nova Transação</h2>
+          <h2>New Transaction</h2>
           <form action="" method="get" onsubmit="Form.submit(event)" accept-charset="utf-8">
             <div class="input-group">
-              <label class="sr-only" for="description">Descrição</label>
+              <label class="sr-only" for="description">Description</label>
               <input type="text/submit/hidden/button/image" 
               name="description" 
               id="description" 
-              placeholder="Descrição"/>
+              placeholder="Description"/>
             </div>
             <div class="input-group">
               <label class="sr-only" for="amount">Valor</label>
@@ -107,7 +107,7 @@
               id="amount" 
               step="0.01"
               placeholder="0,00"/>
-              <small class="help" >Use o sinal - (negativo) para despesas e, (vírgula) para casas decimais</small>
+              <small class="help" >Use (-) (negative) for expenses and (,) (comma) to decimal numbers</small>
             </div>
             <div class="input-group">
               <label class="sr-only" for="date">Data</label>
@@ -117,8 +117,8 @@
               placeholder="00/00/0000"/>
             </div>
             <div class="input-group actions">
-              <a class="button cancel" onclick="Modal.close()" href="#">Cancelar</a>
-              <button>Salvar</button>
+              <a class="button cancel" onclick="Modal.close()" href="#">Cancel</a>
+              <button>Save</button>
             </div>
           </form>
         </div>
@@ -129,7 +129,7 @@
     <footer>
         <p>2023 - gabuh.finance$</p>
     </footer>
-    <script type="text/javascript" src="./script.js">
+    <script type="text/javascript" src="./script-en.js">
     </script>
   </body>
 </html>

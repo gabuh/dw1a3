@@ -1,9 +1,13 @@
 /* Global        ------------*/
 :root{
-  --dark-blue: #363f5f;
-  --green-new: #49AA26;
+  --buttons: #49AA26;
+  --buttons-hover: #3dd705;
   --light-green: #3dd705;
   --red-new: #e92929; 
+  --background: rgba(38, 170, 67, 0.685);
+  --main-text: rgb(8, 8, 8);
+  --second-background: rgb(218, 255, 221);
+  --color-layer: rgb(255, 255, 255);
 }
 
 * {
@@ -17,8 +21,9 @@ html{
 }
 
 body{
-  background: #f0f2f5;
+  background: var(--second-background);
   font-family: 'Poppins',Sans-Serif;
+  transition: background 500ms ease-in-out, color 1000ms ease-in-out;
 }
 
 .sr-only{
@@ -42,18 +47,18 @@ body{
 h2{
   margin-top: 3.2rem;  
   margin-bottom: 0.8rem;
-  color: var(--dark-blue);
+  color: var(--main-text);
   font-weight: normal;
 }
 
 /* Links and Buttons        ------------*/
 a{
-  color: var(--green-new);
+  color: var(--buttons);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--light-green);
+  color: var(--buttons-hover);
 }
 
 button{
@@ -61,14 +66,14 @@ button{
   height: 50px;
   border:none;
   color: white;
-  background: var(--green-new);
+  background: var(--buttons);
   padding: 0;
   border-radius: 0.25rem;
   cursor: pointer;
 }
 
 button:hover{
-  background: var(--light-green);
+  background: var(--buttons-hover);
 }
 
 .button.new{
@@ -91,13 +96,144 @@ button:hover{
   opacity: 1;
 }
 
-/* Header        ------------*/
-header{
-  background: #2d4a22;
-  padding: 2rem 0 12rem;
-  text-align: center;
+.small.icon{
+  width: 20px;
 }
 
+/* Header        ------------*/
+
+#lang-dash{
+  margin-right: 5%;
+
+}
+
+.lang.flag{
+  display: inline-flex;
+  display: none;  
+}
+.lang.flag button{
+  height: max-content;
+}
+.lang.flag.pt.active{
+  left: 0;
+  display: block;
+}
+.lang.flag.en.active{
+  left: 0;
+  display: block ;
+}
+
+
+header{
+  background: var(--background);
+  padding: 2rem 0 12rem;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+}
+
+#theme-button{
+  width: 40px;
+  background-color: var(--buttons);
+  height: 40px;
+  border-radius: 0rem 1rem 1rem 0rem;
+}
+
+#theme-button:hover{
+  background-color: var(--buttons-hover);
+  cursor: pointer;
+}
+
+.theme.dash{
+  position: absolute;
+  background-color: var(--second-background);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  left: 0;
+  right: 0;
+  align-items: center;
+  width: 100px;
+  height: 300px;
+  visibility: hidden;
+  border-radius: 0rem 1rem 1rem 0rem;
+  z-index: 2;
+}
+
+.theme.dash p{
+  color: var(--main-text);
+}
+
+.theme.dash.button{
+  left: 90px;
+  height: 40px;
+  width: 50px;
+  align-items: left;
+  background-color: var(--buttons);
+  visibility: hidden;
+  z-index: 1;
+}
+.theme.dash.button:hover{
+  background-color: var(--buttons-hover);
+  cursor: pointer;
+}  
+.theme.dash.active{
+  visibility: visible;
+}
+.theme.dash.button.active{
+  visibility: visible;
+}
+
+.theme-dash.item{
+  background-color: #e92929;
+  border: black;
+  border-radius: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+.theme-dash.item:hover{
+  cursor: pointer;
+}
+
+.theme-dash.item.dark{
+  background-color: black;
+}
+.theme-dash.item.white{
+  background-color: white;
+}
+.theme-dash.item.green{
+  background-color: green;
+}
+
+.dark{
+  --background: rgb(59, 59, 59);
+  --main-text: white;
+  --second-background: rgb(0, 0, 0);
+  --color-layer: rgb(32, 32, 49);
+  --buttons-hover: rgb(119, 117, 117);
+  --buttons: rgb(163, 163, 163);
+}
+
+.white{
+  --background: rgb(212, 212, 212);
+  --main-text: rgb(20, 18, 18);
+  --second-background: rgb(233, 233, 233);
+  --color-layer: rgb(255, 255, 255);
+  --buttons-hover: rgb(230, 230, 230);
+  --buttons: rgb(119, 119, 119);
+}
+
+.green{
+  --background: rgba(38, 170, 67, 0.685);
+  --main-text: rgb(8, 8, 8);
+  --second-background: rgb(218, 255, 221);
+  --color-layer: rgb(255, 255, 255);
+  --buttons: #49AA26;
+  --buttons-hover: #3dd705;
+}
 
 /* Balance        ------------*/
 #balance {
@@ -131,7 +267,7 @@ header{
 }
 
 .card.total{
-  background: var(--green-new);
+  background: var(--buttons);
   color: white;
 }
 
@@ -140,6 +276,12 @@ header{
   width: 100%;
   overflow-x: auto;
   display: block;
+  
+}
+#transaction div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 
@@ -149,7 +291,7 @@ header{
 #data-table{
   width: 100%;
   border-spacing: 0 0.5rem;
-  color: #969cb3;
+  color: var(--main-text);
 }
 
 table thead tr th:first-child,
@@ -162,7 +304,7 @@ table tbody tr td:last-child{
 }
 
 table thead th{
-  background: white;
+  background: var(--color-layer);
   font-weight: normal;
   padding: 1rem 2rem;
   text-align: left;
@@ -176,15 +318,15 @@ table tbody tr:hover{
 }
 
 table td{
-  background: white;
+  background: var(--color-layer);
   padding: 1rem 2rem;
 }
 
 td.description{
-  color: var(--dark-blue);
+  color: var(--main-text);
 }
 td.income{
-  color: #12a454;
+  color: var(--light-green);
 }
 td.expense{
   color: #e92929;
@@ -210,7 +352,7 @@ td.expense{
 }
 
 .modal{
-  background: #f0f2f5;
+  background: var(--second-background);
   padding: 2.4rem;
   position: relative;
   max-width:90%;
@@ -240,6 +382,7 @@ input {
 
 .input-group .help{
   opacity: 0.4;
+  color:var(--main-text);
 }
 .input-group.actions {
   display: flex;
@@ -256,7 +399,7 @@ input {
 footer{
   text-align: center;
   padding: 4rem 0 2rem;
-  color: var(--dark-blue);
+  color: var(--main-text);
   opacity: 0.6;  
 }
 

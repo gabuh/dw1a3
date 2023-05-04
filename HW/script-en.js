@@ -157,7 +157,7 @@ const Transaction = {
       const signal = Number(value) < 0? '-': '';
       value = String(value).replace(/\D/g,"");
       value = Number(value) / 100;
-      value = value.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+      value = value.toLocaleString("en-GB",{style:"currency",currency:"USD"});
       return signal+value;
     }
   };
@@ -177,7 +177,7 @@ const Form = {
   validateFields(){
     const { description, amount, date } = Form.getValues();
     if(description.trim() === "" || amount.trim() === "" || date.trim() === ""){
-      throw new Error("Por favor, preencha todos os campos");
+      throw new Error("Please, Fill up all the fields");
     }
   },
   formatValues(){
@@ -266,17 +266,7 @@ const csvExportApp = {
       var cols = rows[i].querySelectorAll('td,th');
       var csvrow = [];
       for (var j = 0; j < cols.length-1; j++) {
-        if(j == 1 && i != 0){
-          if (cols[j].innerHTML.startsWith("-")) {
-            var value = "-"+cols[j].innerHTML.split(";")[1];
-            csvrow.push(value.replaceAll(",","."));
-          }else{
-            var value = cols[j].innerHTML.split(";")[1];
-            csvrow.push(value.replaceAll(",","."));
-          }
-        }else{
           csvrow.push(cols[j].innerHTML);
-        }
       }
       csvData.push(csvrow.join(","));
     }
