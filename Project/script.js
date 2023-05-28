@@ -11,6 +11,10 @@ var enemy;
 var objFood;
 var objFood_y;
 var objFood_x;
+var player1Score;
+var player2Score;
+var boardScore1;
+var boardScore2
 var tmp;
 var jump;
 var field = window.innerHeight + window.innerWidth ;
@@ -50,6 +54,10 @@ function start(){
 
     objFood_x = field_x;
     objFood_y = field_y;
+    boardScore1 = 0;
+    boardScore2 = 0;
+    player1Score = document.getElementById("mainScore");
+    player2Score = document.getElementById("enemyScore");
     obj = document.getElementById("main");
     enemy = document.getElementById("enemy");
     objFood = document.getElementById("food");
@@ -132,16 +140,21 @@ function keyUp(e){
 //Função que irá ser o coração do movimento e irá atualizar o movimento.
 
 function etenterframe(){
+    objectDirection()
     px+=dx*jump;
     py+=dy*jump;
     epx+=edx*jump;
     epy+=edy*jump;
     if(objFood_x  == px && objFood_y == py){
+        boardScore1++;
+        player1Score.innerHTML = boardScore1;
         // console.log(obj.style.left+ "<- X - Y -> " + obj.style.top);
         placeFood();
     }
     if(objFood_x  == epx && objFood_y == epy){
         // console.log(obj.style.left+ "<- X - Y -> " + obj.style.top);
+        boardScore2++;
+        player2Score.innerHTML = boardScore2;
         placeFood();
     }
     // console.log("x"+ px,",  y="+ py)
@@ -183,6 +196,7 @@ function etenterframe(){
     }
 }
 
+//Função para posicionar a comida aleatoriamente
 function placeFood() {
     //(0-1) * cols -> (0-19.9999) -> (0-19) * 25
     objFood_x = Math.floor(Math.random() * field_x/playerSize)*playerSize;
@@ -190,6 +204,38 @@ function placeFood() {
     // console.log(objFood_x + "<- x - y -> "+ objFood_y)
     objFood.style.left =  objFood_x +"px";
     objFood.style.top =  objFood_y + "px";
+}
+
+
+//function to manage the obj image direction
+var up;
+var down;
+function objectDirection(){
+    if (dx==1){
+        obj.style.transform = 'scale(1,1)'
+        obj.style.rotate = '0deg'
+        up='90deg'
+        down='-90deg'
+    }
+        if (dx==-1){
+            obj.style.transform = 'scale(-1,1)'
+            obj.style.rotate = '0deg'
+            up='-90deg'
+            down='90deg'
+        }
+    if (dy==-1)
+        obj.style.rotate = down;
+    if (dy==1)
+        obj.style.rotate = up;
+    if(dx==-1 && dy==-1)
+        obj.style.rotate = '45deg'
+    if(dx==1 && dy==1)
+        obj.style.rotate = '45deg'
+    if(dx==1 && dy==-1)
+        obj.style.rotate = '-45deg'
+    if(dx==-1 && dy==1)
+        obj.style.rotate = '-45deg'
+    
 }
 
 
