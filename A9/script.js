@@ -1,7 +1,34 @@
 var boolLeftPanelButton = false;
 
+BackGround = {
+  data: new Array(),
+  add(gradient){
+    console.log(gradient);
+    BackGround.data.push(gradient)
+  },
+  update(index, gradient){
+    BackGround.data[index] = gradient
+    BackGround.set()
+  },
+  set(){
+    let linear = ''
+    for (let index=0; index < BackGround.data.length; index++){
+      element = BackGround.data[index]
+      console.log(index, BackGround.data.length -1);
+      if(index == BackGround.data.length -1){
+        linear = linear + element
+      }else{
+        linear = linear + (element + ', ')     
+      }
+    }
+    console.log(linear)
+    document.body.style.background = linear
+  }
+}
+
 class ColorControls {
-    constructor(element) {
+    constructor(element, index) {
+      this.index = index;
       this.pos1 = 0;
       this.pos2 = 0;
       this.pos3 = 0;
@@ -19,7 +46,8 @@ class ColorControls {
         });
       });
     }
-  
+
+
     updateBackground(index, value) {
       switch (index) {
         case 0:
@@ -36,7 +64,7 @@ class ColorControls {
           break;
       }
       const gradient = `linear-gradient(${this.deg}deg, black ${this.pos1}%, white ${this.pos2}%, green ${this.pos3}%, pink ${this.pos4}%)`;
-      this.bodyElement.style.background = gradient;
+      BackGround.update(this.index,gradient);
     }
 }
   
@@ -71,7 +99,7 @@ Controls = {
                 }
             }
     },
-    add(){
+    add(index){
         div = document.createElement('div')
         div.classList.add('controls')
         div.classList.add('pos')
@@ -91,8 +119,10 @@ Controls = {
                 <input type="range" value="0" class="control">
                 <input type="range" value="0" class="control">
                 <input type="range" value="0" class="control">`
+                console.log(index);
         div.innerHTML = html
-        new ColorControls(div)
+        BackGround.add(`linear-gradient(0deg, black 50%, white 50%, green 50%, pink 50%)`);
+        new ColorControls(div,index)
         Controls.controlsContainer.appendChild(div)
     },
     clear(){
@@ -132,7 +162,7 @@ LeftPanelManager = {
         LeftPanelManager.leftPanelContainer.style.top = LeftPanelManager.topLevel+"%";
         LeftPanelManager.leftPanelContainer.style.height = (100-LeftPanelManager.topLevel)+"%";    
         LeftPanelManager.leftPanelContainer.appendChild(layer);
-        Controls.add();
+        Controls.add(index);
     },
     clear(){
         LeftPanelManager.leftPanelContainer.innerHTML = '<div id="insertButton">+</div>';
