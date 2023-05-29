@@ -1,6 +1,6 @@
 function goPage(x){
-  x>0?x="A"+x:x="HW";
-   window.location.href = x ;
+  x>0?x="A"+x:x="HW"
+  x='P'?window.location.href = "Project" :window.location.href = x ;
 } 
 
 

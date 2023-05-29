@@ -137,10 +137,12 @@ function keyUp(e){
 // }
 
 
+
 //Função que irá ser o coração do movimento e irá atualizar o movimento.
 
 function etenterframe(){
     objectDirection()
+    enemyDirection();
     px+=dx*jump;
     py+=dy*jump;
     epx+=edx*jump;
@@ -206,27 +208,26 @@ function placeFood() {
     objFood.style.top =  objFood_y + "px";
 }
 
-
 //function to manage the obj image direction
-var up;
-var down;
+var objUp;
+var objDown;
 function objectDirection(){
     if (dx==1){
         obj.style.transform = 'scale(1,1)'
         obj.style.rotate = '0deg'
-        up='90deg'
-        down='-90deg'
+        objUp='90deg'
+        objDown='-90deg'
     }
-        if (dx==-1){
-            obj.style.transform = 'scale(-1,1)'
-            obj.style.rotate = '0deg'
-            up='-90deg'
-            down='90deg'
-        }
+    if (dx==-1){
+        obj.style.transform = 'scale(-1,1)'
+        obj.style.rotate = '0deg'
+        objUp='-90deg'
+        objDown='90deg'
+    }
     if (dy==-1)
-        obj.style.rotate = down;
+        obj.style.rotate = objDown
     if (dy==1)
-        obj.style.rotate = up;
+        obj.style.rotate = objUp
     if(dx==-1 && dy==-1)
         obj.style.rotate = '45deg'
     if(dx==1 && dy==1)
@@ -235,6 +236,36 @@ function objectDirection(){
         obj.style.rotate = '-45deg'
     if(dx==-1 && dy==1)
         obj.style.rotate = '-45deg'
+    
+}
+
+var enemyUp;
+var enemyDown;
+function enemyDirection(){
+    if (edx==1){
+        enemy.style.transform = 'scale(1,1)'
+        enemy.style.rotate = '0deg'
+        enemyUp='90deg'
+        enemyDown='-90deg'
+    }
+    if (edx==-1){
+        enemy.style.transform = 'scale(-1,1)'
+        enemy.style.rotate = '0deg'
+        enemyUp='-90deg'
+        enemyDown='90deg'
+    }
+    if (edy==-1)
+        enemy.style.rotate = enemyDown
+    if (edy==1)
+        enemy.style.rotate = enemyUp
+    if(edx==-1 && edy==-1)
+        enemy.style.rotate = '45deg'
+    if(edx==1 && edy==1)
+        enemy.style.rotate = '45deg'
+    if(edx==1 && edy==-1)
+        enemy.style.rotate = '-45deg'
+    if(edx==-1 && edy==1)
+        enemy.style.rotate = '-45deg'
     
 }
 
