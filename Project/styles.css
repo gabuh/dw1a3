@@ -104,6 +104,8 @@ div p{
     display: none;
 }
 
+   
+
 
 #board{
     position: absolute;
@@ -113,14 +115,10 @@ div p{
     width: 100%;
     height: 10%;
     background-color: transparent;
-    color: transparent;
+    color: rgba(214, 9, 9, 0.685);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-#board:hover{
-    background-color: rgba(94, 10, 10, 0.685);
-    color: rgba(255, 255, 255, 0.685);
-}
 

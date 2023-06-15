@@ -200,6 +200,8 @@ function etenterframe(){
 
 //Função para posicionar a comida aleatoriamente
 function placeFood() {
+
+
     //(0-1) * cols -> (0-19.9999) -> (0-19) * 25
     objFood_x = Math.floor(Math.random() * field_x/playerSize)*playerSize;
     objFood_y = Math.floor(Math.random() * field_y/playerSize)*playerSize;
